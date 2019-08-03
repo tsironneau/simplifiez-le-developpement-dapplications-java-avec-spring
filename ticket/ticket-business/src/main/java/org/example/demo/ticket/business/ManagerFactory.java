@@ -10,8 +10,27 @@ import org.example.demo.ticket.business.manager.TicketManager;
  */
 public class ManagerFactory {
 
-    public ProjectManager getProjectManager(){
-        return new ProjectManager();
+    private ProjectManager _projectManager;
+    private TicketManager _ticketManager;
+
+    public ManagerFactory(ProjectManager projectManager, TicketManager ticketManager) {
+        _projectManager = projectManager;
+        _ticketManager = ticketManager;
     }
 
+    public ProjectManager getProjectManager(){
+        return _projectManager;
+    }
+
+    public TicketManager getTicketManager() {
+        return _ticketManager;
+    }
+
+    public void setProjectManager(ProjectManager projectManager) {
+        _projectManager = projectManager;
+    }
+
+    public void setTicketManager(TicketManager ticketManager) {
+        _ticketManager = ticketManager;
+    }
 }
