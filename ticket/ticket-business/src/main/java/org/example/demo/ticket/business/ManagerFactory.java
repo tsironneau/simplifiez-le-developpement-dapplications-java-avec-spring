@@ -1,6 +1,6 @@
 package org.example.demo.ticket.business;
 
-import org.example.demo.ticket.business.manager.ProjectManager;
+import org.example.demo.ticket.business.contract.manager.ProjectManager;
 import org.example.demo.ticket.business.manager.TicketManager;
 
 /**

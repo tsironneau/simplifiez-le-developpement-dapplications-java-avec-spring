@@ -7,8 +7,8 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
-import org.example.demo.ticket.business.ManagerFactory;
-import org.example.demo.ticket.business.manager.ProjectManager;
+import org.example.demo.ticket.business.contract.manager.ProjectManager;
+import org.example.demo.ticket.business.impl.manager.ProjectManagerImpl;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.webapp.rest.resource.AbstractResource;
@@ -46,7 +46,7 @@ public class ProjectResource extends AbstractResource {
      */
     @GET
     public List<Projet> get() {
-        ProjectManager vProjectManager = new ProjectManager();
+        ProjectManager vProjectManager = getManagerFactory().getProjectManager();
         List<Projet> vListProjet = vProjectManager.getListProjet();
         return vListProjet;
     }
