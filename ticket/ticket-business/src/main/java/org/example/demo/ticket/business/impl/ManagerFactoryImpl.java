@@ -1,5 +1,6 @@
-package org.example.demo.ticket.business;
+package org.example.demo.ticket.business.impl;
 
+import org.example.demo.ticket.business.contract.ManagerFactory;
 import org.example.demo.ticket.business.contract.manager.ProjectManager;
 import org.example.demo.ticket.business.contract.manager.TicketManager;
 
@@ -8,20 +9,22 @@ import org.example.demo.ticket.business.contract.manager.TicketManager;
  * <p>
  * ticket-spring
  */
-public class ManagerFactory {
+public class ManagerFactoryImpl implements ManagerFactory {
 
     private ProjectManager _projectManager;
     private TicketManager _ticketManager;
 
-    public ManagerFactory(ProjectManager projectManager, TicketManager ticketManager) {
+    public ManagerFactoryImpl(ProjectManager projectManager, TicketManager ticketManager) {
         _projectManager = projectManager;
         _ticketManager = ticketManager;
     }
 
+    @Override
     public ProjectManager getProjectManager(){
         return _projectManager;
     }
 
+    @Override
     public TicketManager getTicketManager() {
         return _ticketManager;
     }

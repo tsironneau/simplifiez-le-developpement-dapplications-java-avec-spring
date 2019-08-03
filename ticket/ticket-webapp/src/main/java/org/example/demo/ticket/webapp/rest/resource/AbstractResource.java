@@ -1,6 +1,6 @@
 package org.example.demo.ticket.webapp.rest.resource;
 
-import org.example.demo.ticket.business.ManagerFactory;
+import org.example.demo.ticket.business.contract.ManagerFactory;
 
 /**
  * Created by tsironneau on 03/08/2019.

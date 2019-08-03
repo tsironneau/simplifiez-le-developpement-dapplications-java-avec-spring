@@ -1,9 +1,7 @@
-package org.example.demo.ticket.business.manager;
+package org.example.demo.ticket.business.impl.manager;
 
 
-import java.util.ArrayList;
-import java.util.List;
-
+import org.example.demo.ticket.business.contract.manager.TicketManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.bean.ticket.Bug;
 import org.example.demo.ticket.model.bean.ticket.Evolution;
@@ -11,13 +9,16 @@ import org.example.demo.ticket.model.bean.ticket.Ticket;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 /**
  * Manager des beans du package Ticket.
  *
  * @author lgu
  */
-public class TicketManagerImpl implements org.example.demo.ticket.business.contract.manager.TicketManager {
+public class TicketManagerImpl implements TicketManager {
 
     /**
      * Cherche et renvoie le {@link Ticket} numéro {@code pNumero}
