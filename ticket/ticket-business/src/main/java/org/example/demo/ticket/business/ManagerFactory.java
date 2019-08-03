@@ -1,7 +1,7 @@
 package org.example.demo.ticket.business;
 
 import org.example.demo.ticket.business.contract.manager.ProjectManager;
-import org.example.demo.ticket.business.manager.TicketManager;
+import org.example.demo.ticket.business.contract.manager.TicketManager;
 
 /**
  * Created by tsironneau on 03/08/2019.

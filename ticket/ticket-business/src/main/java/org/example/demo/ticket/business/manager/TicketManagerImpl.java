@@ -17,7 +17,7 @@ import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
  *
  * @author lgu
  */
-public class TicketManager {
+public class TicketManagerImpl implements org.example.demo.ticket.business.contract.manager.TicketManager {
 
     /**
      * Cherche et renvoie le {@link Ticket} numéro {@code pNumero}
@@ -26,6 +26,7 @@ public class TicketManager {
      * @return Le {@link Ticket}
      * @throws NotFoundException Si le Ticket n'est pas trouvé
      */
+    @Override
     public Ticket getTicket(Long pNumero) throws NotFoundException {
         // Je n'ai pas encore codé la DAO
         // Je mets juste un code temporaire pour commencer le cours...
@@ -44,6 +45,7 @@ public class TicketManager {
      * @param pRechercheTicket -
      * @return List
      */
+    @Override
     public List<Ticket> getListTicket(RechercheTicket pRechercheTicket) {
         // Je n'ai pas encore codé la DAO
         // Je mets juste un code temporaire pour commencer le cours...
@@ -71,6 +73,7 @@ public class TicketManager {
      * @param pRechercheTicket -
      * @return int
      */
+    @Override
     public int getCountTicket(RechercheTicket pRechercheTicket) {
         // Je n'ai pas encore codé la DAO
         // Je mets juste un code temporaire pour commencer le cours...
