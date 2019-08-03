@@ -13,7 +13,7 @@ import org.example.demo.ticket.model.exception.NotFoundException;
  *
  * @author lgu
  */
-public class ProjetManager {
+public class ProjectManager {
 
     /**
      * Renvoie le projet demandé
