@@ -11,6 +11,7 @@ import org.example.demo.ticket.business.ManagerFactory;
 import org.example.demo.ticket.business.manager.ProjectManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
+import org.example.demo.ticket.webapp.rest.resource.AbstractResource;
 
 
 /**
@@ -20,9 +21,7 @@ import org.example.demo.ticket.model.exception.NotFoundException;
  */
 @Path("/projets")
 @Produces(MediaType.APPLICATION_JSON)
-public class ProjectResource {
-
-    private final ManagerFactory _managerFactory = new ManagerFactory();
+public class ProjectResource extends AbstractResource {
 
     /**
      * Renvoie le {@link Projet} d'identifiant {@code pId}
@@ -34,7 +33,7 @@ public class ProjectResource {
     @GET
     @Path("{id}")
     public Projet get(@PathParam("id") Integer pId) throws NotFoundException {
-        ProjectManager vProjectManager = _managerFactory.getProjectManager();
+        ProjectManager vProjectManager = getManagerFactory().getProjectManager();
         Projet vProjet = vProjectManager.getProjet(pId);
         return vProjet;
     }
