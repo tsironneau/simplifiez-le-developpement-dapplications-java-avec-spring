@@ -9,6 +9,7 @@ import org.example.demo.ticket.model.bean.ticket.Ticket;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
 
+import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -18,6 +19,7 @@ import java.util.List;
  *
  * @author lgu
  */
+@Named
 public class TicketManagerImpl implements TicketManager {
 
     /**
