@@ -1,6 +1,7 @@
 package org.example.demo.ticket.business.impl.manager;
 
 
+import org.example.demo.ticket.business.contract.DaoFactory;
 import org.example.demo.ticket.business.contract.manager.TicketManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.bean.ticket.Bug;
@@ -9,7 +10,6 @@ import org.example.demo.ticket.model.bean.ticket.Ticket;
 import org.example.demo.ticket.model.exception.NotFoundException;
 import org.example.demo.ticket.model.recherche.ticket.RechercheTicket;
 
-import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +19,9 @@ import java.util.List;
  *
  * @author lgu
  */
-@Named
 public class TicketManagerImpl implements TicketManager {
+
+    private DaoFactory _daoFactory;
 
     /**
      * Cherche et renvoie le {@link Ticket} numéro {@code pNumero}
@@ -81,5 +82,9 @@ public class TicketManagerImpl implements TicketManager {
         // Je n'ai pas encore codé la DAO
         // Je mets juste un code temporaire pour commencer le cours...
         return 42;
+    }
+
+    public void setDaoFactory(DaoFactory daoFactory) {
+        _daoFactory = daoFactory;
     }
 }

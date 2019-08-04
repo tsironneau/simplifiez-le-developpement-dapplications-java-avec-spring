@@ -1,11 +1,11 @@
 package org.example.demo.ticket.business.impl.manager;
 
 
+import org.example.demo.ticket.business.contract.DaoFactory;
 import org.example.demo.ticket.business.contract.manager.ProjectManager;
 import org.example.demo.ticket.model.bean.projet.Projet;
 import org.example.demo.ticket.model.exception.NotFoundException;
 
-import javax.inject.Named;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,8 +15,9 @@ import java.util.List;
  *
  * @author lgu
  */
-@Named
 public class ProjectManagerImpl implements ProjectManager {
+
+    private DaoFactory _daoFactory;
 
     /**
      * Renvoie le projet demandé
@@ -54,5 +55,9 @@ public class ProjectManagerImpl implements ProjectManager {
             vList.add(vProjet);
         }
         return vList;
+    }
+
+    public void setDaoFactory(DaoFactory daoFactory) {
+        _daoFactory = daoFactory;
     }
 }
