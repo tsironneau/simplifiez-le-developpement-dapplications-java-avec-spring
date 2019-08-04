@@ -15,7 +15,7 @@
 
     <!-- ===== ManagerFactory ===== -->
     <bean id="managerFactory" class="org.example.demo.ticket.business.impl.ManagerFactoryImpl">
-        <property name="_projectManager" ref="projetManager"/>
-        <property name="_ticketManager" ref="ticketManager"/>
+        <constructor-arg ref="projectManager"/>
+        <constructor-arg ref="ticketManager"/>
     </bean>
 </beans>

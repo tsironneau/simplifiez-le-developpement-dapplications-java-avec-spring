@@ -11,8 +11,8 @@ import org.example.demo.ticket.business.contract.manager.TicketManager;
  */
 public class ManagerFactoryImpl implements ManagerFactory {
 
-    private ProjectManager _projectManager;
-    private TicketManager _ticketManager;
+    private final ProjectManager _projectManager;
+    private final TicketManager _ticketManager;
 
     public ManagerFactoryImpl(ProjectManager projectManager, TicketManager ticketManager) {
         _projectManager = projectManager;
@@ -29,11 +29,4 @@ public class ManagerFactoryImpl implements ManagerFactory {
         return _ticketManager;
     }
 
-    public void setProjectManager(ProjectManager projectManager) {
-        _projectManager = projectManager;
-    }
-
-    public void setTicketManager(TicketManager ticketManager) {
-        _ticketManager = ticketManager;
-    }
 }
