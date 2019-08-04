@@ -12,6 +12,6 @@ import org.springframework.context.annotation.ImportResource;
 
 @Configuration
 @ComponentScan("org.example.demo.ticket")
-@ImportResource("classpath:/applicationContext.xml")
+@ImportResource("classpath:/bootstrapContext.xml")
 public class SpringConfiguration {
 }
