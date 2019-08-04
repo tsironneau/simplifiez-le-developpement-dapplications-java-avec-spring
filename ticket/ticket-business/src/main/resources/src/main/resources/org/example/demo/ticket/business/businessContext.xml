@@ -5,13 +5,15 @@
             http://www.springframework.org/schema/beans
             http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <bean id="abstractManager" abstract="true">
+        <property name="_daoFactory" ref="daoFactory"/>
+    </bean>
+
     <!-- ===== Déclaration des Managers ===== -->
-    <bean id="projectManager" class="org.example.demo.ticket.business.impl.manager.ProjetManagerImpl">
-        <property name="_daoFactory" ref="daoFactory"/>
-    </bean>
-    <bean id="ticketManager" class="org.example.demo.ticket.business.impl.manager.TicketManagerImpl">
-        <property name="_daoFactory" ref="daoFactory"/>
-    </bean>
+    <bean id="projectManager" class="org.example.demo.ticket.business.impl.manager.ProjetManagerImpl"
+          parent="abstractManager"/>
+    <bean id="ticketManager" class="org.example.demo.ticket.business.impl.manager.TicketManagerImpl"
+          parent="abstractManager"/>
 
     <!-- ===== ManagerFactory ===== -->
     <bean id="managerFactory" class="org.example.demo.ticket.business.impl.ManagerFactoryImpl">
