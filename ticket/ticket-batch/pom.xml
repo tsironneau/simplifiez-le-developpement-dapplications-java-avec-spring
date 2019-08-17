@@ -41,7 +41,10 @@
 
 
         <!-- ===== Bibliothèques tierces ===== -->
-
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+        </dependency>
 
         <!-- ===== Tests ===== -->
         <dependency>
